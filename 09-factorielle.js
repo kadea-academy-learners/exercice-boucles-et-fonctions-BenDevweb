@@ -10,10 +10,17 @@
   Placeholder : levée d'erreur pour indiquer que l'exercice doit être implémenté.
 */
 function factorielle(n) {
-  // Exercice non implémenté : calculer la factorielle de n
-  // Placeholder neutre : retourne 0 pour indiquer non-implémentation
-  return 0;
-}
+  if (typeof n !== "number" || !Number.isInteger(n) || n < 0) {
+    return 0;
+  }
 
+  let resultat = 1;
+  for (let i = 1; i <= n; i++) {
+    resultat *= i;
+  }
+
+  return resultat;
+}
+console.log(factorielle(4));
 // Ne pas modifier la ligne ci-dessous
 module.exports = { factorielle }

@@ -11,9 +11,16 @@
   Placeholder : levée d'erreur pour indiquer que l'exercice doit être implémenté.
 */
 function maxDeTrois(a, b, c) {
-  // Placeholder neutre : retourne null pour indiquer non-implémentation
-  return null;
+  if( arguments.length !== 3 || (typeof a !== "number" || typeof b !== "number" || typeof c !== "number" || isNaN(a) || isNaN(b) || isNaN(c))) {
+    return null;
+  }
+  return  a === b && b === c ? "Les trois nombres sont égaux" : a > b && a > c ? a : b > a && b > c ? b : c ; 
 }
+console.log(maxDeTrois(3,3,3));
+console.log(maxDeTrois(5,2,3));
+console.log(maxDeTrois(1,7,4));
+console.log(maxDeTrois(2,6,9));
+console.log(maxDeTrois(2,"test",9));
 
 // Ne pas modifier la ligne ci-dessous
 module.exports = { maxDeTrois };

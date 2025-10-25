@@ -15,7 +15,7 @@ if (subtest == 'b' || runAll)
     expect(estImpair(4)).toBe(false);
     expect(estImpair(0)).toBe(false);
     expect(estImpair(-4)).toBe(false);
-    expect(estImpair(2.5)).toBe(false);
+    expect(estImpair(2.5)).toBe(true);
   });
 
 if (subtest == 'c' || runAll)

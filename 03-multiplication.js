@@ -14,6 +14,7 @@ function multiplication(a, b) {
   // Vérifier les types
   if (typeof a !== 'number' || typeof b !== 'number') return undefined;
   if (isNaN(a) || isNaN(b)) return undefined;
+  
 
   return a * b;
 }
